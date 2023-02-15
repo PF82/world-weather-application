@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Weather App</title>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+
+<body id="background-image">
+
+  <span class="msg"></span>
+
+<div class="earth"></div>
+  
+  <main>
+    <header>
+      <h1 id="heading"> WORLD WEATHER</h1>
+    </header>
+
+    <section class="top-banner">
+      <form id="form">
+        <input type="text" placeholder="Search for a location" autofocus>
+        <button type="submit">SUBMIT</button>
+      </form>
+    </section>
+
+    <section class="ajax-section">
+      <div class="container">
+        <ul class="cities"></ul>
+      </div>
+    </section>
+
+    <section id="weather-data">
+
+      <div id="weather-icon_temperature">
+        <div id="weather_icon"></div>
+        <div id="temp"></div>
+      </div>
+
+      <div id="mix-temp_max-temp_feels-like">
+        <p class="box box1" id="temp_max"></p>
+        <p class="box box2" id="temp_min"></p>
+        <p class="box box3" id="feels_like"></p>
+      </div>
+
+      <p id="descr"></p>
+
+      <table id="other-weather-data-items">
+        <tr>
+          <td class="sunrise"></td>
+          <td id="sunrise"></td>
+        </tr>
+        <tr>
+          <td class="sunset"></td>
+          <td id="sunset"></td>
+        </tr>
+        <tr>
+          <td class="humidity"></td>
+          <td id="humidity"></td>
+        </tr>
+        <tr>
+          <td class="visibility"></td>
+          <td id="visibility"></td>
+        </tr>
+        <tr>
+          <td class="wind-speed"></td>
+          <td id="wind-speed"></td>
+        </tr>
+        <tr>
+          <td class="wind-deg"></td>
+          <td id="wind-deg"></td>
+          <td id="space"></td>
+        </tr>
+        <tr>
+          <td class="wind-gust"></td>
+          <td id="wind-gust"></td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="buttons">
+      <button id="metric" class="button button1" type="button" title="Switch to metric units" aria-label="Toggle between metric
+        and imperial measurement units">°C</button>
+      <button id="refresh" class="button button2 fas fa-sync none" type="button" title="Refresh the webpage"
+        aria-label="Refresh the current webpage" onclick="window.location.reload()"></button>
+      <button id="imperial" class="button button3" type="button" title="Switch to imperial units" aria-label="Toggle between metric
+        and imperial measurement units">°F</button>
+    </section>
+  </main>
+
+  <script src="https://kit.fontawesome.com/d1dc215e58.js" crossorigin="anonymous"></script>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+  <script type="module" src="../src/index.js"></script>
+
+</body>
+
+</html>

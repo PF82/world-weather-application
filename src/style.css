@@ -1,0 +1,431 @@
+/* reset styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Source+Sans+Pro', sans-serif, "Times New Roman";
+    font-size: 14px;
+    color: black;
+}
+
+/* body */
+
+body {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background-color: none;
+    background-image: url("../public/img/night-sky.jpg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+/* 3d rotating earth globe  */
+
+.earth {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url(https://1.bp.blogspot.com/-UUXaK5GCj-k/UcsKJRMgkVI/AAAAAAAACfM/sePP_H08JTQ/s1600/1.jpg);
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+    animation: spin 30s linear alternate infinite;
+}
+
+@keyframes spin {
+    100% {
+        background-position: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .earth {
+        width: 300px;
+        height: 300px;
+    }
+
+    #heading {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    main {
+        max-width: 220px;
+        min-height: auto;
+    }
+
+    div #temp {
+        padding-left: 10px;
+        font-size: 35px;
+    }
+
+    #form input,
+    #form button {
+        font-size: 12px;
+        height: 25px;
+        border-radius: 5px;
+        width: 200px;
+        padding: 0px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .earth {
+        width: 340px;
+        height: 340px;
+    }
+
+    #heading {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    main {
+        max-width: 220px;
+        min-height: auto;
+    }
+
+    div #temp {
+        padding-left: 10px;
+        font-size: 35px;
+    }
+
+    #form input,
+    #form button {
+        font-size: 12px;
+        height: 25px;
+        border-radius: 5px;
+        width: 200px;
+        padding: 0px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .earth {
+        width: 650px;
+        height: 650px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .earth {
+        width: 750px;
+        height: 750px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .earth {
+        width: 750px;
+        height: 750px;
+    }
+}
+
+/* error message */
+
+.msg {
+    display: block;
+    text-align: center;
+    padding-top: 250px;
+    color: black;
+}
+
+/* main*/
+
+main {
+    background: linear-gradient(0deg, #537987 0%, #154579 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 270px;
+    min-height: auto;
+    margin: auto;
+    padding: 0 10px;
+    padding-bottom: 25px;
+    border-radius: 50px;
+}
+
+/* header */
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+}
+
+/* form */
+
+input[type="text"] {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    padding: 8px 5px;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 10px;
+    border-color: black;
+    background-color: white;
+    background-clip: padding-box;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    padding-top: 2px;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 10px;
+    border-color: black;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* map icon (ajax section) */
+
+#map-icon {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* location / country / date & time (ajax section) */
+
+#location_country {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#location {
+    margin: 0;
+}
+
+#country {
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+#date-time {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* weather-icon / temperature */
+
+#weather-icon_temperature {
+    display: flex;
+    flex-flow: row;
+    margin: -10px auto;
+}
+
+#weather_icon,
+#temp {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#temp {
+    font-size: 50px;
+}
+
+/* min. temperature / max. temperature / feels like temperature */
+
+#mix-temp_max-temp_feels-like {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.box {
+    flex: 1 auto 1;
+}
+
+.box1 {
+    text-align: right;
+}
+
+/* description */
+
+#descr {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#descr::first-letter {
+    text-transform: uppercase;
+}
+
+/* other weather data items */
+
+#other-weather-data-items {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.sunrise,
+.sunset,
+.humidity,
+.pressure,
+.dew-point,
+.uvi,
+.visibility,
+.wind-speed,
+.wind-deg,
+.wind-gust,
+.sea-level-atmospheric-pressure,
+.grnd-level-atmospheric-pressure {
+    font-weight: bold;
+}
+
+#sunrise,
+#sunset,
+#humidity,
+#pressure,
+#dew-point,
+#uvi,
+#visibility,
+#wind-speed,
+#wind-deg,
+#wind-gust,
+#sea-level-atmospheric-pressure,
+#grnd-level-atmospheric-pressure {
+    text-align: right;
+    padding-left: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+/* refresh, metric and imperial units buttons */
+
+#buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+#buttons>button {
+    width: 30px;
+    height: 30px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    outline: black;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    margin: 10px 5px -10px 5px;
+    background-color: blue;
+}
+
+#buttons>button:hover {
+    cursor: pointer;
+}
+
+#buttons>button:hover,
+#buttons>button:focus {
+    box-shadow: 4px 2px 5px blue;
+    border-color: black;
+}
+
+/* couple of simple classes */
+
+#none {
+    display: none;
+}
+
+#block {
+    display: block;
+}
+
+/* // media-queries / breakpoints
+
+// common breakpoints for widths of devices
+// 320px — 480px: smartphones
+// 481px — 768px: ipads/tablets
+// 769px — 1024px: latops/small screens
+// 1025px — 1200px: desktops/large screens
+// 1201px and more —  tvs/extra large screens
+
+// media query min-width and max-width
+@mixin mq($size1, $size2) {
+  @media only screen and (min-width: $size1) and (max-width: $size2) {
+      @content;
+  }
+}
+
+// media query width
+@mixin mqw($size) {
+  @media only screen and (min-width: $size) {
+      @content;
+  }
+}
+
+// media query min-height
+@mixin mqminh($size) {
+  @media only screen and (min-height: $size) {
+      @content;
+  }
+}
+
+// media query max-height
+@mixin mqmaxh($size) {
+  @media only screen and (max-height: $size) {
+      @content;
+  }
+}
+
+// media query min-height and max-height
+@mixin mqmhmh($size1, $size2) {
+  @media only screen and (min-height: $size1) and (max-height: $size2) {
+      @content;
+  }
+}
+
+// media query max-width and min-height
+@mixin mqmwmh($size1, $size2) {
+
+  // iPad Pro w: 1024 & Iphone Plus 6/7/8 h: 736
+  @media only screen and (max-width: $size1) and (min-height: $size2) {
+      @content;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 460px) {
+  body {
+      margin-bottom: 60px;
+  }
+}  */
