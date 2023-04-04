@@ -9,7 +9,7 @@ const msg = document.querySelector(".msg");
 const list = document.querySelector(".ajax-section .cities");
 
 // openweathermap API key
-const apiKey = "229123719331231a3ae10f87dcb22d0d"; // process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+const apiKey = "229123719331231a3ae10f87dcb22d0d"; // process.env.REACT_APP_OPENWEATHERMAP_API_KEY
 
 // add event listener to fire the submit event which occurs when the whole page has loaded
 form.addEventListener("submit", event => {
