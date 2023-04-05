@@ -43,7 +43,7 @@ body {
     border-radius: 50%;
     background-size: cover;
     box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
-    animation: spin 30s linear alternate infinite;
+    animation: spin 50s linear alternate infinite;
 }
 
 @keyframes spin {
@@ -370,62 +370,3 @@ ul {
 #block {
     display: block;
 }
-
-/* // media-queries / breakpoints
-
-// common breakpoints for widths of devices
-// 320px — 480px: smartphones
-// 481px — 768px: ipads/tablets
-// 769px — 1024px: latops/small screens
-// 1025px — 1200px: desktops/large screens
-// 1201px and more —  tvs/extra large screens
-
-// media query min-width and max-width
-@mixin mq($size1, $size2) {
-  @media only screen and (min-width: $size1) and (max-width: $size2) {
-      @content;
-  }
-}
-
-// media query width
-@mixin mqw($size) {
-  @media only screen and (min-width: $size) {
-      @content;
-  }
-}
-
-// media query min-height
-@mixin mqminh($size) {
-  @media only screen and (min-height: $size) {
-      @content;
-  }
-}
-
-// media query max-height
-@mixin mqmaxh($size) {
-  @media only screen and (max-height: $size) {
-      @content;
-  }
-}
-
-// media query min-height and max-height
-@mixin mqmhmh($size1, $size2) {
-  @media only screen and (min-height: $size1) and (max-height: $size2) {
-      @content;
-  }
-}
-
-// media query max-width and min-height
-@mixin mqmwmh($size1, $size2) {
-
-  // iPad Pro w: 1024 & Iphone Plus 6/7/8 h: 736
-  @media only screen and (max-width: $size1) and (min-height: $size2) {
-      @content;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 460px) {
-  body {
-      margin-bottom: 60px;
-  }
-}  */

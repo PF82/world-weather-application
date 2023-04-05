@@ -1,6 +1,5 @@
 import { meterSecToKmH, meterSecToMpH, degreesToDirections, speedGustToKmH, speedGustToMpH, utcTogmt } from "./js/weather-data.js";
 import { backgroundImageChange } from "./js/background-img.js";
-// import { metricToImperial, imperialToMetric } from "./js/units.js";
 
 // get DOM references
 const form = document.querySelector("form");
